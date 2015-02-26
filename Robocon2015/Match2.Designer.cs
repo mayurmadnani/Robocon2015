@@ -46,6 +46,7 @@
             this.btn_nxtround = new System.Windows.Forms.Button();
             this.lbl_redScore1 = new System.Windows.Forms.Label();
             this.lbl_blueScore1 = new System.Windows.Forms.Label();
+            this.lbl_round = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RedTeamImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueTeamImage)).BeginInit();
@@ -226,6 +227,18 @@
             this.lbl_blueScore1.Text = "0";
             this.lbl_blueScore1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbl_round
+            // 
+            this.lbl_round.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_round.ForeColor = System.Drawing.Color.LightGreen;
+            this.lbl_round.Location = new System.Drawing.Point(380, 560);
+            this.lbl_round.Name = "lbl_round";
+            this.lbl_round.Size = new System.Drawing.Size(300, 50);
+            this.lbl_round.TabIndex = 21;
+            this.lbl_round.Text = "Round 2";
+            this.lbl_round.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Match2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -233,6 +246,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 768);
+            this.Controls.Add(this.lbl_round);
             this.Controls.Add(this.lbl_blueScore1);
             this.Controls.Add(this.lbl_redScore1);
             this.Controls.Add(this.btn_nxtround);
@@ -282,5 +296,6 @@
         private System.Windows.Forms.Button btn_nxtround;
         private System.Windows.Forms.Label lbl_redScore1;
         private System.Windows.Forms.Label lbl_blueScore1;
+        private System.Windows.Forms.Label lbl_round;
     }
 }

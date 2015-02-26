@@ -38,6 +38,7 @@ namespace Robocon2015
             if (rounds.Equals("2 Rounds") || rounds.Equals("3 Rounds"))
             {
                 btn_nxtround.Visible = true;
+                lbl_round.Visible = true;
             }
 
             string constring = @"Data Source=(localdb)\v11.0;Initial Catalog=Robocon2015db;Integrated Security=True;Pooling=False";

@@ -83,6 +83,7 @@ namespace Robocon2015
                  combobox_red.ResetText();
                  combobox_blue.ResetText();
                  lbl_matchtype.Text = "Match Type?";
+                 combobox_round.ResetText();
 
              }
          }
