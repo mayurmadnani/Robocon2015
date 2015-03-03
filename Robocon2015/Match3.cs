@@ -35,14 +35,12 @@ namespace Robocon2015
         private void Match_Load(object sender, EventArgs e)
         {
             lbl_red.Text = redteam;
-            lbl_redScore2.Text = "0";
+            lbl_redScore2.Text = "";
             lbl_blue.Text = blueteam;
-            lbl_blueScore2.Text = "0";
+            lbl_blueScore2.Text = "";
             lbl_matchtype.Text = matchtype;
-            if (rounds.Equals("3 Rounds"))
-            {
-                btn_nxtround.Visible = true;
-            }
+            btn_nxtround.Visible = false;
+            
 
             string constring = @"Data Source=(localdb)\v11.0;Initial Catalog=Robocon2015db;Integrated Security=True;Pooling=False";
             string Query = "select * from RoboconTable where CollegeDisplayName='" + lbl_red.Text + "';";
@@ -135,13 +133,6 @@ namespace Robocon2015
             Form winner = new Winner(lbl_blue.Text, lbl_matchtype.Text);
             winner.Show();
             this.Close();
-        }
-
-
-        private void buttonnxtrnd_Click(object sender, EventArgs e)
-        {
-            //Form match = new Match3(lbl_red.Text,lbl_blue.Text,lbl_redScore.Text,lbl_blueScore.Text,lbl_matchtype.Text);
-            //match.Show();
         }
 
     }

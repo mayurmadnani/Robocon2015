@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Match3));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.redWinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueWinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,7 +121,6 @@
             this.lbl_redScore.Name = "lbl_redScore";
             this.lbl_redScore.Size = new System.Drawing.Size(218, 91);
             this.lbl_redScore.TabIndex = 4;
-            this.lbl_redScore.Text = "0";
             this.lbl_redScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_blueScore
@@ -134,7 +132,6 @@
             this.lbl_blueScore.Name = "lbl_blueScore";
             this.lbl_blueScore.Size = new System.Drawing.Size(230, 91);
             this.lbl_blueScore.TabIndex = 7;
-            this.lbl_blueScore.Text = "0";
             this.lbl_blueScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BlueTeamImage
@@ -162,7 +159,7 @@
             this.lbl_matchtype.BackColor = System.Drawing.Color.Transparent;
             this.lbl_matchtype.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_matchtype.ForeColor = System.Drawing.Color.YellowGreen;
-            this.lbl_matchtype.Location = new System.Drawing.Point(380, 390);
+            this.lbl_matchtype.Location = new System.Drawing.Point(360, 385);
             this.lbl_matchtype.Name = "lbl_matchtype";
             this.lbl_matchtype.Size = new System.Drawing.Size(300, 50);
             this.lbl_matchtype.TabIndex = 14;
@@ -203,7 +200,6 @@
             this.btn_nxtround.Text = ">>>";
             this.btn_nxtround.UseVisualStyleBackColor = true;
             this.btn_nxtround.Visible = false;
-            this.btn_nxtround.Click += new System.EventHandler(this.buttonnxtrnd_Click);
             // 
             // lbl_redScore1
             // 
@@ -214,7 +210,6 @@
             this.lbl_redScore1.Name = "lbl_redScore1";
             this.lbl_redScore1.Size = new System.Drawing.Size(218, 70);
             this.lbl_redScore1.TabIndex = 19;
-            this.lbl_redScore1.Text = "0";
             this.lbl_redScore1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_blueScore1
@@ -226,7 +221,6 @@
             this.lbl_blueScore1.Name = "lbl_blueScore1";
             this.lbl_blueScore1.Size = new System.Drawing.Size(218, 70);
             this.lbl_blueScore1.TabIndex = 20;
-            this.lbl_blueScore1.Text = "0";
             this.lbl_blueScore1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_redScore2
@@ -238,7 +232,6 @@
             this.lbl_redScore2.Name = "lbl_redScore2";
             this.lbl_redScore2.Size = new System.Drawing.Size(218, 134);
             this.lbl_redScore2.TabIndex = 21;
-            this.lbl_redScore2.Text = "0";
             this.lbl_redScore2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_blueScore2
@@ -250,7 +243,6 @@
             this.lbl_blueScore2.Name = "lbl_blueScore2";
             this.lbl_blueScore2.Size = new System.Drawing.Size(218, 134);
             this.lbl_blueScore2.TabIndex = 22;
-            this.lbl_blueScore2.Text = "0";
             this.lbl_blueScore2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_round
@@ -269,7 +261,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Robocon2015.Properties.Resources.VS3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.lbl_round);

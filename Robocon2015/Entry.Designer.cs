@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entry));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,6 +121,8 @@
             // 
             // combobox_red
             // 
+            this.combobox_red.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combobox_red.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combobox_red.FormattingEnabled = true;
             this.combobox_red.Location = new System.Drawing.Point(256, 747);
             this.combobox_red.Name = "combobox_red";
@@ -130,6 +131,8 @@
             // 
             // combobox_blue
             // 
+            this.combobox_blue.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combobox_blue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combobox_blue.DisplayMember = "College";
             this.combobox_blue.FormattingEnabled = true;
             this.combobox_blue.Location = new System.Drawing.Point(576, 747);
@@ -149,6 +152,8 @@
             // 
             // combobox_round
             // 
+            this.combobox_round.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.combobox_round.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combobox_round.FormattingEnabled = true;
             this.combobox_round.Items.AddRange(new object[] {
             "1 Round",
@@ -163,7 +168,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::Robocon2015.Properties.Resources.Entry;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.combobox_round);

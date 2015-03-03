@@ -19,12 +19,13 @@ namespace Robocon2015
             txt_winner2.Text = winteam;
             if(matchtype.Equals("Final"))
             {
-                lbl_winner.Text = "WINNER of ROBOMINTON 2015";
+                // ROBOMINTON WINNER
             }
             else
             {
-                lbl_winner.Text = "WINNER";
+                // "WINNER";
             }
+         
         }
 
         private void timer_Tick(object sender, EventArgs e)

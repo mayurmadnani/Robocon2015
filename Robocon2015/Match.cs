@@ -31,9 +31,9 @@ namespace Robocon2015
         private void Match_Load(object sender, EventArgs e)
         {
             lbl_red.Text = redteam;
-            lbl_redScore.Text = "0";
+            lbl_redScore.Text = "";
             lbl_blue.Text = blueteam;
-            lbl_blueScore.Text = "0";
+            lbl_blueScore.Text = "";
             lbl_matchtype.Text = matchtype;
             if (rounds.Equals("2 Rounds") || rounds.Equals("3 Rounds"))
             {

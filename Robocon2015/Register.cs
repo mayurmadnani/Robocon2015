@@ -16,6 +16,7 @@ namespace Robocon2015
     {
         String imagename;
 
+
         public Register()
         {
             InitializeComponent();

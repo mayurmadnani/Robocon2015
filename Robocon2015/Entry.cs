@@ -24,7 +24,7 @@ namespace Robocon2015
         public void fillComboBox()
         {
             String constring = @"Data Source=(localdb)\v11.0;Initial Catalog=Robocon2015db;Integrated Security=True;Pooling=False";
-            String query = "select CollegeDisplayName from RoboconTable;";
+            String query = "select CollegeDisplayName from RoboconTable order by CollegeDisplayName;";
             SqlConnection conDataBase = new SqlConnection(constring);
             SqlCommand cmdDataBase = new SqlCommand(query, conDataBase);
             SqlDataReader myReader;
