@@ -65,18 +65,6 @@
     <Compile Include="Entry.Designer.cs">
       <DependentUpon>Entry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Match3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Match3.Designer.cs">
-      <DependentUpon>Match3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Match2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Match2.Designer.cs">
-      <DependentUpon>Match2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Match.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +92,6 @@
     </Compile>
     <EmbeddedResource Include="Entry.resx">
       <DependentUpon>Entry.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Match3.resx">
-      <DependentUpon>Match3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Match2.resx">
-      <DependentUpon>Match2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Match.resx">
       <DependentUpon>Match.cs</DependentUpon>

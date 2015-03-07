@@ -49,42 +49,19 @@ namespace Robocon2015
             }
 
         }
-
-        private void pToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lbl_matchtype.Text = "Preliminary";
-        }
-
-        private void qToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lbl_matchtype.Text = "Quarter-Final";
-        }
-
-        private void sToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lbl_matchtype.Text = "Semi-Final"; 
-        }
-
-        private void fToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            lbl_matchtype.Text = "Final";
-        }
-
+        
         private void startMatchToolStripMenuItem_Click(object sender, EventArgs e)
          {
-             if (!lbl_matchtype.Text.Equals("Match Type?") &&
+             if (!lbl_matchtype.Text.Equals("??") &&
                  !combobox_red.Text.Equals("") &&
-                 !combobox_blue.Text.Equals("") &&
-                 !combobox_round.Text.Equals(""))
+                 !combobox_blue.Text.Equals("") )
              {
-                 Form match = new Match(combobox_red.Text, combobox_blue.Text, lbl_matchtype.Text,combobox_round.Text);
+                 Form match = new Match(combobox_red.Text, combobox_blue.Text, lbl_matchtype.Text);
                  match.Show();
 
                  combobox_red.ResetText();
                  combobox_blue.ResetText();
-                 lbl_matchtype.Text = "Match Type?";
-                 combobox_round.ResetText();
-
+                 lbl_matchtype.Text = "??";
              }
          }
 
@@ -97,6 +74,31 @@ namespace Robocon2015
         {
             Form register = new Register();
             register.Show();
+        }
+
+        private void LToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lbl_matchtype.Text = "League";
+        }
+
+        private void SLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lbl_matchtype.Text = "Super-League";
+        }
+
+        private void QFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lbl_matchtype.Text = "Quarter-Final";
+        }
+
+        private void SFToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lbl_matchtype.Text = "Semi-Final";
+        }
+
+        private void FToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            lbl_matchtype.Text = "Final";
         }
 
 

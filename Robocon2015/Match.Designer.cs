@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.redWinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueWinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_exit = new System.Windows.Forms.Button();
             this.lbl_red = new System.Windows.Forms.Label();
             this.RedTeamImage = new System.Windows.Forms.PictureBox();
             this.lbl_redScore = new System.Windows.Forms.Label();
@@ -41,9 +40,9 @@
             this.txt_red = new System.Windows.Forms.TextBox();
             this.txt_blue = new System.Windows.Forms.TextBox();
             this.btn_show = new System.Windows.Forms.Button();
-            this.btn_nxtround = new System.Windows.Forms.Button();
+            this.btn_tscore = new System.Windows.Forms.Button();
             this.lbl_matchtype = new System.Windows.Forms.Label();
-            this.lbl_round = new System.Windows.Forms.Label();
+            this.lbl_totalscore = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RedTeamImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueTeamImage)).BeginInit();
@@ -66,46 +65,36 @@
             // redWinToolStripMenuItem
             // 
             this.redWinToolStripMenuItem.Name = "redWinToolStripMenuItem";
-            this.redWinToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
-            this.redWinToolStripMenuItem.Text = "Red Win";
+            this.redWinToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.redWinToolStripMenuItem.Text = "Blue Win";
             this.redWinToolStripMenuItem.Click += new System.EventHandler(this.redWinToolStripMenuItem_Click);
             // 
             // blueWinToolStripMenuItem
             // 
             this.blueWinToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.blueWinToolStripMenuItem.Name = "blueWinToolStripMenuItem";
-            this.blueWinToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.blueWinToolStripMenuItem.Text = "Blue Win";
+            this.blueWinToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.blueWinToolStripMenuItem.Text = "Red Win";
             this.blueWinToolStripMenuItem.Click += new System.EventHandler(this.blueWinToolStripMenuItem_Click);
-            // 
-            // btn_exit
-            // 
-            this.btn_exit.Location = new System.Drawing.Point(978, 0);
-            this.btn_exit.Name = "btn_exit";
-            this.btn_exit.Size = new System.Drawing.Size(45, 23);
-            this.btn_exit.TabIndex = 1;
-            this.btn_exit.Text = "X";
-            this.btn_exit.UseVisualStyleBackColor = true;
-            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // lbl_red
             // 
             this.lbl_red.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_red.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_red.ForeColor = System.Drawing.Color.Red;
-            this.lbl_red.Location = new System.Drawing.Point(30, 175);
+            this.lbl_red.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_red.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbl_red.Location = new System.Drawing.Point(10, 120);
             this.lbl_red.Name = "lbl_red";
             this.lbl_red.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_red.Size = new System.Drawing.Size(450, 100);
+            this.lbl_red.Size = new System.Drawing.Size(500, 180);
             this.lbl_red.TabIndex = 0;
             this.lbl_red.Text = "Red Team";
             this.lbl_red.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RedTeamImage
             // 
-            this.RedTeamImage.Location = new System.Drawing.Point(177, 265);
+            this.RedTeamImage.Location = new System.Drawing.Point(130, 320);
             this.RedTeamImage.Name = "RedTeamImage";
-            this.RedTeamImage.Size = new System.Drawing.Size(160, 160);
+            this.RedTeamImage.Size = new System.Drawing.Size(225, 200);
             this.RedTeamImage.TabIndex = 2;
             this.RedTeamImage.TabStop = false;
             // 
@@ -114,9 +103,9 @@
             this.lbl_redScore.BackColor = System.Drawing.Color.Transparent;
             this.lbl_redScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 150F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_redScore.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_redScore.Location = new System.Drawing.Point(130, 430);
+            this.lbl_redScore.Location = new System.Drawing.Point(130, 530);
             this.lbl_redScore.Name = "lbl_redScore";
-            this.lbl_redScore.Size = new System.Drawing.Size(218, 310);
+            this.lbl_redScore.Size = new System.Drawing.Size(220, 190);
             this.lbl_redScore.TabIndex = 4;
             this.lbl_redScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -125,28 +114,28 @@
             this.lbl_blueScore.BackColor = System.Drawing.Color.Transparent;
             this.lbl_blueScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 150F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_blueScore.ForeColor = System.Drawing.Color.Yellow;
-            this.lbl_blueScore.Location = new System.Drawing.Point(691, 430);
+            this.lbl_blueScore.Location = new System.Drawing.Point(660, 530);
             this.lbl_blueScore.Name = "lbl_blueScore";
-            this.lbl_blueScore.Size = new System.Drawing.Size(230, 310);
+            this.lbl_blueScore.Size = new System.Drawing.Size(220, 190);
             this.lbl_blueScore.TabIndex = 7;
             this.lbl_blueScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BlueTeamImage
             // 
-            this.BlueTeamImage.Location = new System.Drawing.Point(708, 265);
+            this.BlueTeamImage.Location = new System.Drawing.Point(660, 320);
             this.BlueTeamImage.Name = "BlueTeamImage";
-            this.BlueTeamImage.Size = new System.Drawing.Size(160, 160);
+            this.BlueTeamImage.Size = new System.Drawing.Size(225, 200);
             this.BlueTeamImage.TabIndex = 6;
             this.BlueTeamImage.TabStop = false;
             // 
             // lbl_blue
             // 
             this.lbl_blue.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_blue.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_blue.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.lbl_blue.Location = new System.Drawing.Point(560, 175);
+            this.lbl_blue.Font = new System.Drawing.Font("Microsoft Sans Serif", 38F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_blue.ForeColor = System.Drawing.Color.DarkRed;
+            this.lbl_blue.Location = new System.Drawing.Point(505, 120);
             this.lbl_blue.Name = "lbl_blue";
-            this.lbl_blue.Size = new System.Drawing.Size(450, 100);
+            this.lbl_blue.Size = new System.Drawing.Size(500, 180);
             this.lbl_blue.TabIndex = 5;
             this.lbl_blue.Text = "Blue Team";
             this.lbl_blue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,51 +166,50 @@
             this.btn_show.UseVisualStyleBackColor = true;
             this.btn_show.Click += new System.EventHandler(this.btn_show_Click);
             // 
-            // btn_nxtround
+            // btn_tscore
             // 
-            this.btn_nxtround.Location = new System.Drawing.Point(562, 743);
-            this.btn_nxtround.Name = "btn_nxtround";
-            this.btn_nxtround.Size = new System.Drawing.Size(75, 23);
-            this.btn_nxtround.TabIndex = 18;
-            this.btn_nxtround.Text = ">>>";
-            this.btn_nxtround.UseVisualStyleBackColor = true;
-            this.btn_nxtround.Visible = false;
-            this.btn_nxtround.Click += new System.EventHandler(this.buttonnxtrnd_Click);
+            this.btn_tscore.Location = new System.Drawing.Point(562, 743);
+            this.btn_tscore.Name = "btn_tscore";
+            this.btn_tscore.Size = new System.Drawing.Size(75, 23);
+            this.btn_tscore.TabIndex = 18;
+            this.btn_tscore.Text = "Total Score";
+            this.btn_tscore.UseVisualStyleBackColor = true;
+            this.btn_tscore.Click += new System.EventHandler(this.btn_tscore_Click);
             // 
             // lbl_matchtype
             // 
             this.lbl_matchtype.BackColor = System.Drawing.Color.Transparent;
             this.lbl_matchtype.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_matchtype.ForeColor = System.Drawing.Color.YellowGreen;
-            this.lbl_matchtype.Location = new System.Drawing.Point(360, 385);
+            this.lbl_matchtype.Location = new System.Drawing.Point(358, 500);
             this.lbl_matchtype.Name = "lbl_matchtype";
             this.lbl_matchtype.Size = new System.Drawing.Size(300, 50);
             this.lbl_matchtype.TabIndex = 19;
             this.lbl_matchtype.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbl_round
+            // lbl_totalscore
             // 
-            this.lbl_round.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_round.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_round.ForeColor = System.Drawing.Color.LightGreen;
-            this.lbl_round.Location = new System.Drawing.Point(380, 560);
-            this.lbl_round.Name = "lbl_round";
-            this.lbl_round.Size = new System.Drawing.Size(300, 50);
-            this.lbl_round.TabIndex = 20;
-            this.lbl_round.Text = "Round 1";
-            this.lbl_round.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_round.Visible = false;
+            this.lbl_totalscore.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_totalscore.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_totalscore.ForeColor = System.Drawing.Color.SpringGreen;
+            this.lbl_totalscore.Location = new System.Drawing.Point(360, 590);
+            this.lbl_totalscore.Name = "lbl_totalscore";
+            this.lbl_totalscore.Size = new System.Drawing.Size(300, 50);
+            this.lbl_totalscore.TabIndex = 20;
+            this.lbl_totalscore.Text = "Total Score";
+            this.lbl_totalscore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_totalscore.Visible = false;
             // 
             // Match
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Robocon2015.Properties.Resources.VS1;
+            this.BackgroundImage = global::Robocon2015.Properties.Resources.VS3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 768);
-            this.Controls.Add(this.lbl_round);
+            this.Controls.Add(this.lbl_totalscore);
             this.Controls.Add(this.lbl_matchtype);
-            this.Controls.Add(this.btn_nxtround);
+            this.Controls.Add(this.btn_tscore);
             this.Controls.Add(this.btn_show);
             this.Controls.Add(this.txt_blue);
             this.Controls.Add(this.txt_red);
@@ -231,7 +219,6 @@
             this.Controls.Add(this.lbl_redScore);
             this.Controls.Add(this.RedTeamImage);
             this.Controls.Add(this.lbl_red);
-            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
@@ -251,7 +238,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Label lbl_red;
         private System.Windows.Forms.PictureBox RedTeamImage;
         private System.Windows.Forms.Label lbl_redScore;
@@ -263,8 +249,8 @@
         private System.Windows.Forms.TextBox txt_red;
         private System.Windows.Forms.TextBox txt_blue;
         private System.Windows.Forms.Button btn_show;
-        private System.Windows.Forms.Button btn_nxtround;
+        private System.Windows.Forms.Button btn_tscore;
         private System.Windows.Forms.Label lbl_matchtype;
-        private System.Windows.Forms.Label lbl_round;
+        private System.Windows.Forms.Label lbl_totalscore;
     }
 }

@@ -7,25 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.IO;
 
 namespace Robocon2015
 {
     public partial class Winner : Form
     {
-        public Winner(String winteam, String matchtype)
+        String winteam;
+        public Winner(String w)
         {
             InitializeComponent();
-            txt_winner1.Text = winteam;
-            txt_winner2.Text = winteam;
-            if(matchtype.Equals("Final"))
-            {
-                // ROBOMINTON WINNER
-            }
-            else
-            {
-                // "WINNER";
-            }
-         
+            txt_winner1.Text = txt_winner2.Text = winteam = w;
+            timer.Enabled = true;
+            
         }
 
         private void timer_Tick(object sender, EventArgs e)
@@ -33,9 +28,5 @@ namespace Robocon2015
             txt_winner2.Visible = txt_winner2.Visible == true ? false : true;
         }
 
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }

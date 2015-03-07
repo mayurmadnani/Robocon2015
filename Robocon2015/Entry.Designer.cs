@@ -32,15 +32,15 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.qToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.QFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startMatchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.combobox_red = new System.Windows.Forms.ComboBox();
             this.combobox_blue = new System.Windows.Forms.ComboBox();
             this.lbl_matchtype = new System.Windows.Forms.Label();
-            this.combobox_round = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,11 +49,12 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exitToolStripMenuItem,
-            this.pToolStripMenuItem,
-            this.qToolStripMenuItem,
-            this.sToolStripMenuItem,
-            this.fToolStripMenuItem,
-            this.startMatchToolStripMenuItem});
+            this.LToolStripMenuItem,
+            this.SLToolStripMenuItem,
+            this.QFToolStripMenuItem,
+            this.SFToolStripMenuItem,
+            this.startMatchToolStripMenuItem,
+            this.FToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 744);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1024, 24);
@@ -83,33 +84,33 @@
             this.exitToolStripMenuItem1.Text = "Exit";
             this.exitToolStripMenuItem1.Click += new System.EventHandler(this.exitToolStripMenuItem1_Click);
             // 
-            // pToolStripMenuItem
+            // LToolStripMenuItem
             // 
-            this.pToolStripMenuItem.Name = "pToolStripMenuItem";
-            this.pToolStripMenuItem.Size = new System.Drawing.Size(26, 20);
-            this.pToolStripMenuItem.Text = "P";
-            this.pToolStripMenuItem.Click += new System.EventHandler(this.pToolStripMenuItem_Click);
+            this.LToolStripMenuItem.Name = "LToolStripMenuItem";
+            this.LToolStripMenuItem.Size = new System.Drawing.Size(25, 20);
+            this.LToolStripMenuItem.Text = "L";
+            this.LToolStripMenuItem.Click += new System.EventHandler(this.LToolStripMenuItem_Click);
             // 
-            // qToolStripMenuItem
+            // SLToolStripMenuItem
             // 
-            this.qToolStripMenuItem.Name = "qToolStripMenuItem";
-            this.qToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
-            this.qToolStripMenuItem.Text = "Q";
-            this.qToolStripMenuItem.Click += new System.EventHandler(this.qToolStripMenuItem_Click);
+            this.SLToolStripMenuItem.Name = "SLToolStripMenuItem";
+            this.SLToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.SLToolStripMenuItem.Text = "SL";
+            this.SLToolStripMenuItem.Click += new System.EventHandler(this.SLToolStripMenuItem_Click);
             // 
-            // sToolStripMenuItem
+            // QFToolStripMenuItem
             // 
-            this.sToolStripMenuItem.Name = "sToolStripMenuItem";
-            this.sToolStripMenuItem.Size = new System.Drawing.Size(25, 20);
-            this.sToolStripMenuItem.Text = "S";
-            this.sToolStripMenuItem.Click += new System.EventHandler(this.sToolStripMenuItem_Click);
+            this.QFToolStripMenuItem.Name = "QFToolStripMenuItem";
+            this.QFToolStripMenuItem.Size = new System.Drawing.Size(34, 20);
+            this.QFToolStripMenuItem.Text = "QF";
+            this.QFToolStripMenuItem.Click += new System.EventHandler(this.QFToolStripMenuItem_Click);
             // 
-            // fToolStripMenuItem
+            // SFToolStripMenuItem
             // 
-            this.fToolStripMenuItem.Name = "fToolStripMenuItem";
-            this.fToolStripMenuItem.Size = new System.Drawing.Size(25, 20);
-            this.fToolStripMenuItem.Text = "F";
-            this.fToolStripMenuItem.Click += new System.EventHandler(this.fToolStripMenuItem_Click);
+            this.SFToolStripMenuItem.Name = "SFToolStripMenuItem";
+            this.SFToolStripMenuItem.Size = new System.Drawing.Size(31, 20);
+            this.SFToolStripMenuItem.Text = "SF";
+            this.SFToolStripMenuItem.Click += new System.EventHandler(this.SFToolStripMenuItem_Click);
             // 
             // startMatchToolStripMenuItem
             // 
@@ -119,14 +120,21 @@
             this.startMatchToolStripMenuItem.Text = "Start Match";
             this.startMatchToolStripMenuItem.Click += new System.EventHandler(this.startMatchToolStripMenuItem_Click);
             // 
+            // FToolStripMenuItem1
+            // 
+            this.FToolStripMenuItem1.Name = "FToolStripMenuItem1";
+            this.FToolStripMenuItem1.Size = new System.Drawing.Size(25, 20);
+            this.FToolStripMenuItem1.Text = "F";
+            this.FToolStripMenuItem1.Click += new System.EventHandler(this.FToolStripMenuItem1_Click);
+            // 
             // combobox_red
             // 
             this.combobox_red.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.combobox_red.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combobox_red.FormattingEnabled = true;
-            this.combobox_red.Location = new System.Drawing.Point(256, 747);
+            this.combobox_red.Location = new System.Drawing.Point(607, 747);
             this.combobox_red.Name = "combobox_red";
-            this.combobox_red.Size = new System.Drawing.Size(303, 21);
+            this.combobox_red.Size = new System.Drawing.Size(338, 21);
             this.combobox_red.TabIndex = 5;
             // 
             // combobox_blue
@@ -135,34 +143,20 @@
             this.combobox_blue.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.combobox_blue.DisplayMember = "College";
             this.combobox_blue.FormattingEnabled = true;
-            this.combobox_blue.Location = new System.Drawing.Point(576, 747);
+            this.combobox_blue.Location = new System.Drawing.Point(293, 747);
             this.combobox_blue.Name = "combobox_blue";
-            this.combobox_blue.Size = new System.Drawing.Size(280, 21);
+            this.combobox_blue.Size = new System.Drawing.Size(308, 21);
             this.combobox_blue.TabIndex = 7;
             this.combobox_blue.ValueMember = "College";
             // 
             // lbl_matchtype
             // 
             this.lbl_matchtype.AutoSize = true;
-            this.lbl_matchtype.Location = new System.Drawing.Point(180, 750);
+            this.lbl_matchtype.Location = new System.Drawing.Point(211, 750);
             this.lbl_matchtype.Name = "lbl_matchtype";
-            this.lbl_matchtype.Size = new System.Drawing.Size(70, 13);
+            this.lbl_matchtype.Size = new System.Drawing.Size(19, 13);
             this.lbl_matchtype.TabIndex = 10;
-            this.lbl_matchtype.Text = "Match Type?";
-            // 
-            // combobox_round
-            // 
-            this.combobox_round.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.combobox_round.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.combobox_round.FormattingEnabled = true;
-            this.combobox_round.Items.AddRange(new object[] {
-            "1 Round",
-            "2 Rounds",
-            "3 Rounds"});
-            this.combobox_round.Location = new System.Drawing.Point(862, 747);
-            this.combobox_round.Name = "combobox_round";
-            this.combobox_round.Size = new System.Drawing.Size(74, 21);
-            this.combobox_round.TabIndex = 11;
+            this.lbl_matchtype.Text = "??";
             // 
             // Entry
             // 
@@ -171,7 +165,6 @@
             this.BackgroundImage = global::Robocon2015.Properties.Resources.Entry;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1024, 768);
-            this.Controls.Add(this.combobox_round);
             this.Controls.Add(this.lbl_matchtype);
             this.Controls.Add(this.combobox_blue);
             this.Controls.Add(this.combobox_red);
@@ -194,15 +187,15 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ComboBox combobox_red;
         private System.Windows.Forms.ComboBox combobox_blue;
-        private System.Windows.Forms.ToolStripMenuItem pToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem qToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem LToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SLToolStripMenuItem;
         private System.Windows.Forms.Label lbl_matchtype;
-        private System.Windows.Forms.ToolStripMenuItem sToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem fToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem QFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem startMatchToolStripMenuItem;
-        private System.Windows.Forms.ComboBox combobox_round;
         private System.Windows.Forms.ToolStripMenuItem registerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem FToolStripMenuItem1;
     }
 }
 

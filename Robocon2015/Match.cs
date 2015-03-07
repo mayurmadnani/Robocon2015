@@ -17,15 +17,15 @@ namespace Robocon2015
         String matchtype;
         String redteam;
         String blueteam;
-        String rounds;
+        String redname;
+        String bluename;
 
-        public Match(String r, String b, String m,String round)
+        public Match(String r, String b, String m)
         {
             InitializeComponent();
             redteam = r;
             blueteam = b;
             matchtype = m;
-            rounds = round;
         }
 
         private void Match_Load(object sender, EventArgs e)
@@ -35,12 +35,7 @@ namespace Robocon2015
             lbl_blue.Text = blueteam;
             lbl_blueScore.Text = "";
             lbl_matchtype.Text = matchtype;
-            if (rounds.Equals("2 Rounds") || rounds.Equals("3 Rounds"))
-            {
-                btn_nxtround.Visible = true;
-                lbl_round.Visible = true;
-            }
-
+            
             string constring = @"Data Source=(localdb)\v11.0;Initial Catalog=Robocon2015db;Integrated Security=True;Pooling=False";
             string Query = "select * from RoboconTable where CollegeDisplayName='" + lbl_red.Text + "';";
             SqlConnection conDataBase = new SqlConnection(constring);
@@ -55,6 +50,15 @@ namespace Robocon2015
                 RedTeamImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 while (myReader.Read())
                 {
+                    if(matchtype=="Final")
+                    {
+                        redname = (String)(myReader["CollegeName"]);
+                    }
+                    else
+                    {
+                        redname = lbl_red.Text;
+                    }
+                    
                     byte[] imgg = (byte[])(myReader["CollegeImage"]);
                     if (imgg == null)
                     {
@@ -67,6 +71,7 @@ namespace Robocon2015
 
                     }
                 }
+                
             }
 
             catch (Exception ex)
@@ -86,6 +91,15 @@ namespace Robocon2015
                 BlueTeamImage.SizeMode = PictureBoxSizeMode.StretchImage;
                 while (myReader2.Read())
                 {
+                    if (matchtype == "Final")
+                    {
+                        bluename = (String)(myReader2["CollegeName"]);
+                    }
+                    else
+                    {
+                        bluename = lbl_blue.Text;
+                    }
+                    
                     byte[] imgg2 = (byte[])(myReader2["CollegeImage"]);
                     if (imgg2 == null)
                     {
@@ -98,6 +112,7 @@ namespace Robocon2015
 
                     }
                 }
+                
             }
 
             catch (Exception ex1)
@@ -109,11 +124,6 @@ namespace Robocon2015
         }
 
 
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btn_show_Click(object sender, EventArgs e)
         {
             lbl_redScore.Text = "";
@@ -124,24 +134,27 @@ namespace Robocon2015
 
         private void redWinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form winner = new Winner(lbl_red.Text, lbl_matchtype.Text);
-            winner.Show();
-            this.Close();
+            if (matchtype == "Final")
+            {
+                Form winner = new Winner(redname);
+                winner.Show();
+                this.Close();
+            }
         }
 
         private void blueWinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form winner = new Winner(lbl_blue.Text, lbl_matchtype.Text);
-            winner.Show();
-            this.Close();
+            if (matchtype == "Final")
+            {
+                Form winner = new Winner(bluename);
+                winner.Show();
+                this.Close();
+            }
         }
 
-
-        private void buttonnxtrnd_Click(object sender, EventArgs e)
+        private void btn_tscore_Click(object sender, EventArgs e)
         {
-            Form match = new Match2(lbl_red.Text,lbl_blue.Text,lbl_redScore.Text,lbl_blueScore.Text,lbl_matchtype.Text, rounds);
-            match.Show();
-            this.Close();
+            lbl_totalscore.Visible = lbl_totalscore.Visible ? false : true;
         }
 
     }
